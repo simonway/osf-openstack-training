@@ -22,6 +22,10 @@
 
 Virtualbox 下载地址：https://www.virtualbox.org/wiki/Downloads
 
+创建一个基础虚拟机，完成后，需要删除本机的MAC地址。这样，复制的虚拟机才可以工作。
+   #rm -r /etc/udev/rule.d/70-persistence-net.rules
+   
+
 ###虚拟网络
 
 需要新建3个虚拟网络Net0、Net1和Net2，其在virtual box 中对应配置如下。
