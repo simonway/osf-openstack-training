@@ -633,8 +633,6 @@ keystone 注册endpoint
 配置Neutron ml2 plugin 用openvswitch
 
 	ln -s /etc/neutron/plugins/ml2/ml2_conf.ini /etc/neutron/plugin.ini
-	
-	cp 
 
 	openstack-config --set /etc/neutron/neutron.conf DEFAULT core_plugin ml2
 	openstack-config --set /etc/neutron/neutron.conf DEFAULT service_plugins router
