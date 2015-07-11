@@ -671,6 +671,18 @@ keystone 注册endpoint
 
 	service neutron-server start
 	chkconfig neutron-server on
+
+
+查看MySQL的表是否创建成功
+
+	mysql -uroot -popenstack
+	mysql>use neutron;
+	mysql>show tables;    应该有25个tables生成
+	
+测试Neutron的服务是否成功
+
+	neutron agent-list      如果不报错，说明Neutron server安装正确
+	tail -f /var/log/neutron/server.log
 	
 ##网路节点安装（network0 node）
 
