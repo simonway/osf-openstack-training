@@ -685,11 +685,13 @@ keystone 注册endpoint
 	tail -f /var/log/neutron/server.log
 	
 ##网路节点安装（network0 node）
+	需要删除本机的MAC地址。这样，复制的虚拟机才可以工作。 #rm -r /etc/udev/rule.d/70-persistence-net.rules
 
 主机名设置
 
 	vi /etc/sysconfig/network
 	HOSTNAME=network0
+	
 
 网卡配置
 
