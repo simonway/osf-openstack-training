@@ -832,7 +832,7 @@ keystone 注册endpoint
 为br-ext 添加ip
 
 	ip link set br-ex up
-	sudo ip addr add 172.16.0.20/24 dev br-ex
+	sudo ip addr add 172.16.0.20/24 dev br-ex    每次启动network0节点，都要运行这个命令
 
 启动Neutron 服务
 
@@ -845,6 +845,9 @@ keystone 注册endpoint
 	chkconfig neutron-l3-agent on
 	chkconfig neutron-dhcp-agent on
 	chkconfig neutron-metadata-agent on
+检查Neutron agent是否启动成功，在Controller0节点上，运行：
+	neutron agent-list
+	
 
 
 ## 计算节点安装（（compute0 node）
