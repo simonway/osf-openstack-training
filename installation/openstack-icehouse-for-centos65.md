@@ -728,6 +728,12 @@ keystone 注册endpoint
 
 先安装Neutron 相关的包
 
+	vi /etc/yum.repos.d/local.repo
+		[local]
+		name=local
+		baseurl=http://10.20.0.100/YumSource
+		gpgcheck=0
+	
 	yum install -y openstack-neutron openstack-neutron-ml2 openstack-neutron-openvswitch
 
 允许ip forward
@@ -884,7 +890,15 @@ keystone 注册endpoint
 
 安装nova 相关包
 
+	vi /etc/yum.repos.d/local.repo
+		[local]
+		name=local
+		baseurl=http://10.20.0.100/YumSource
+		gpgcheck=0
+		
+		
 	yum install -y openstack-nova-compute
+
 
 配置nova
 
